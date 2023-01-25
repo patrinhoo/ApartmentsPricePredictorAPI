@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+
+<head>
+    <title>Wyceń swoje mieszkanie</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'styles/app.css' %}">
+    <link rel="icon" href="{% static 'images/paper-plane.png' %}">
+</head>
+
+<body>
+    <div class="img"></div>
+    <form class="form">
+        <h2>Powierzchnia mieszkania (w &#x33A1)</h2>
+        <input class="area" type="number" id="uiArea" class="floatLabel" name="Area" placeholder="Podaj powierzchnię">
+        <h2>Liczba pokoi</h2>
+        <div class="rooms-field">
+            <input type="radio" id="radio-bhk-1" name="uiRoomsNr" value="1" />
+            <label for="radio-bhk-1">1</label>
+            <input type="radio" id="radio-bhk-2" name="uiRoomsNr" value="2" checked />
+            <label for="radio-bhk-2">2</label>
+            <input type="radio" id="radio-bhk-3" name="uiRoomsNr" value="3" />
+            <label for="radio-bhk-3">3</label>
+            <input type="radio" id="radio-bhk-4" name="uiRoomsNr" value="4" />
+            <label for="radio-bhk-4">4</label>
+            <input type="radio" id="radio-bhk-5" name="uiRoomsNr" value="5" />
+            <label for="radio-bhk-5">5+</label>
+        </div>
+    </form>
+
+    <form class="floors">
+        <div class="drop-down-floors">
+            <h2>Piętro</h2>
+            <select class="location" name="" id="uiFloor">
+                <option value="" disabled="disabled" selected="selected">Wybierz piętro</option>
+            </select>
+        </div>
+
+        <div class="drop-down-floors">
+            <h2>Pięter w budynku</h2>
+            <select class="location" name="" id="uiBuildingFloors">
+                <option value="" disabled="disabled" selected="selected">Liczba pięter</option>
+            </select>
+        </div>
+    </form>
+
+    <form class="form">
+        <h2>Łazienka w mieszkaniu</h2>
+        <div class="bathroom-field">
+            <input type="radio" id="radio-bath-1" name="uiBathroom" value="tak" checked />
+            <label for="radio-bath-1">Tak</label>
+            <input type="radio" id="radio-bath-2" name="uiBathroom" value="nie" />
+            <label for="radio-bath-2">Nie</label>
+        </div>
+    </form>
+    <form class="drop-down-lists">
+        <div class="drop-down-list">
+            <h2>Województwo</h2>
+            <select class="location" name="" id="uiVoivodeship">
+                <option value="" disabled="disabled" selected="selected">Wybierz województwo</option>
+            </select>
+        </div>
+
+        <div class="drop-down-list">
+            <h2>Zabudowa</h2>
+            <select class="location" name="" id="uiBuildingStyle">
+                <option value="" disabled="disabled" selected="selected">Wybierz rodzaj zabudowy</option>
+            </select>
+        </div>
+
+
+        <div class="drop-down-list">
+            <h2>Kuchnia</h2>
+            <select class="location" name="" id="uiKitchen">
+                <option value="" disabled="disabled" selected="selected">Wybierz rodzaj kuchni</option>
+            </select>
+        </div>
+    </form>
+
+    <form class="drop-down-lists">
+        <div class="drop-down-list">
+            <h2>Parking</h2>
+            <select class="location" name="" id="uiParking">
+                <option value="" disabled="disabled" selected="selected">Wybierz rodzaj parkingu</option>
+            </select>
+        </div>
+
+        <div class="drop-down-list">
+            <h2>Stan</h2>
+            <select class="location" name="" id="uiCondition">
+                <option value="" disabled="disabled" selected="selected">Wybierz stan mieszkania</option>
+            </select>
+        </div>
+
+
+        <div class="drop-down-list">
+            <h2>Materiał</h2>
+            <select class="location" name="" id="uiMaterial">
+                <option value="" disabled="disabled" selected="selected">Wybierz materiał</option>
+            </select>
+        </div>
+    </form>
+
+    <form class="form">
+        <button class="submit" onclick="onClickedEstimatePrice()" type="button"><b>OBLICZ WARTOŚĆ
+                MIESZKANIA</b></button>
+        <div id="uiEstimatedPrice" class="result">
+            <b></b>
+        </div>
+    </form>
+</body>
+
+</html>
