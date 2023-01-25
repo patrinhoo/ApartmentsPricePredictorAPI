@@ -1,5 +1,5 @@
 # ApartmentsPricePredictorAPI
-This is a django project for predicting apartment price.\
+This is a django project for predicting apartment price.  
 
 Project is based on ML model from this repo:\
 https://github.com/patrinhoo/ApartmentsPricePredictorModel/  
