@@ -1,1 +1,1 @@
-web: gunicorn ApartmentsPricePredictor.wsgi --log-file -
+web: gunicorn ApartmentsPricePredictorAPI.wsgi
