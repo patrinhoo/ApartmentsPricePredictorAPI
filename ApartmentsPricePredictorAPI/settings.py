@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-%(&0k$x%g=ss&78@%w+_8x5b)75eq#74#0&f7%64^s-wy*(_j3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['apartmentspricepredictor.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -121,6 +121,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = "static/"
 MEDIA_URL = "images/"
