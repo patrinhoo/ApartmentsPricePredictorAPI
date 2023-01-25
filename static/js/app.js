@@ -33,8 +33,10 @@ async function onClickedEstimatePrice() {
   const bathroom = getBathroom();
   const estPrice = document.getElementById("uiEstimatedPrice");
 
-  if (!area.value) alert("Musisz podać powierzchnię mieszkania!");
-  else if (!floor.value)
+  if (!area.value) {
+    alert("Musisz podać powierzchnię mieszkania!");
+    area.focus();
+  } else if (!floor.value)
     alert("Musisz podać piętro na którym znajduje się mieszkanie!");
   else if (!building_floors.value)
     alert("Musisz podać liczbę pięter w budynku!");
